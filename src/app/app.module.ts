@@ -13,6 +13,20 @@ import { HeaderComponent } from './layouts/full/full/header/header.component';
 import { SidebarComponent } from './layouts/full/full/sidebar/sidebar.component';
 import { BestSellerComponent } from './best-seller/best-seller.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
+import { SignupComponent } from './signup/signup.component';
+import { NgxUiLoaderConfig, NgxUiLoaderModule, SPINNER } from 'ngx-ui-loader';
+
+const ngxUiLoaderConfig : NgxUiLoaderConfig = {
+  text: 'Loading...',
+  textColor: '#FFFFFF',
+  textPosition: 'center-center',
+  bgsColor: '#7b1fa2',
+  fgsColor: '#7b1fa2',
+  fgsType: SPINNER.squareJellyBox,
+  fgsSize : 100,
+  hasProgressBar : false
+}
 
 @NgModule({
   declarations: [
@@ -21,7 +35,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FullComponent,
     HeaderComponent,
     SidebarComponent,
-     BestSellerComponent
+     BestSellerComponent,
+     SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +46,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReactiveFormsModule,
     MaterialModule,
     SharedModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
