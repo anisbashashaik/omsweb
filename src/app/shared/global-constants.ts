@@ -12,4 +12,6 @@ export class GlobalConstants {
 
     // Variable
     public static error: string = "error";
+
+    public static unauthorized: string = "you are not Unauthorized User to access this page";
 }

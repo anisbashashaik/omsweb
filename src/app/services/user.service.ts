@@ -17,4 +17,29 @@ export class UserService {
     });
   }
 
+  forgotPassword(data: any) {
+    console.log(data);
+    return this.httpClient.post(this.baseUrl + '/yfsuser/forgotPassword', data, {
+      headers : new HttpHeaders().set( 'Content-Type', 'application/json')
+    });
+  }
+
+  login(data: any) {
+    console.log(data);
+    return this.httpClient.post(this.baseUrl + '/yfsuser/login', data, {
+      headers : new HttpHeaders().set( 'Content-Type', 'application/json')
+    });
+  }
+
+  checkToken(){
+    return this.httpClient.get(this.baseUrl + '/yfsuser/checkToken');
+  }
+
+  changePassword(data: any) {
+    console.log(data);
+    return this.httpClient.post(this.baseUrl + '/yfsuser/changePassword', data, {
+      headers : new HttpHeaders().set( 'Content-Type', 'application/json')
+    });
+  }
+
 }
