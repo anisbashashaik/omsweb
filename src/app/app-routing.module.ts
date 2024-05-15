@@ -22,7 +22,7 @@ const routes: Routes = [
           () => import('./material-component/material.module').then(m => m.MaterialComponentsModule),
           canActivate: [RouteGuardService],
           data : {
-            expectedRole: ['admin', 'user']
+            expectedRole: ['Admin', 'User']
           }
       },
       {

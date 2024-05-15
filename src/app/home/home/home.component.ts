@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     this.userService.checkToken().subscribe((response:any) => {
       this.router.navigate(['/cafe/dashboard']);
     }, (err : any) => {
-      console.log(err);
+      
     })
   }
 

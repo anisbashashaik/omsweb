@@ -15,12 +15,47 @@ const MENUITEMS = [
         type: 'link',
         icon: 'dashboard',
         role: ''
+    },
+    {
+        state: 'category',
+        name: 'Manage Category',
+        type: 'link',
+        icon: 'category',
+        role: 'Admin'
+    },
+    {
+        state: 'product',
+        name: 'Manage Product',
+        type: 'link',
+        icon: 'inventory_2',
+        role: 'Admin'
+    },
+    {
+        state: 'order',
+        name: 'Manage Order',
+        type: 'link',
+        icon: 'shopping_cart',
+        role: ''
+    },
+    {
+        state: 'bill',
+        name: 'View Bill',
+        type: 'link',
+        icon: 'backup_table',
+        role: ''
+    },
+    {
+        state: 'user',
+        name: 'Manage User',
+        type: 'link',
+        icon: 'people',
+        role: 'Admin'
     }
 ]
 
 @Injectable()
-export class MenuItems{
-    getMenuItem(): Menu[]{
+export class MenuItems {
+    getMenuItem(): Menu[] {
         return MENUITEMS;
     }
 }

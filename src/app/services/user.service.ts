@@ -42,4 +42,14 @@ export class UserService {
     });
   }
 
+  getUsers(){
+    return this.httpClient.get(this.baseUrl + "/yfsuser/get");
+  }
+
+  update(data:any){
+    return this.httpClient.post(this.baseUrl + '/yfsuser/update', data, {
+      headers : new HttpHeaders().set( 'Content-Type', 'application/json')
+    });
+  }
+
 }
